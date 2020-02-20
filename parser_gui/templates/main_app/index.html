@@ -3,5 +3,11 @@
 
 {% block content %}
     <h1>PAMAGITI</h1>
+    <form action="{% url 'main_app:test' %}" method="POST">
+        {% csrf_token %}
+        <textarea name="zapros"  cols="10" rows="1" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <br>
 {% endblock content %}
-    
+
